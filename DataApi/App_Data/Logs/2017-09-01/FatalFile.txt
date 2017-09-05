@@ -1,0 +1,13 @@
+2017-09-01 17:36:11.7505 | FATAL | DataApi.Controllers.RealDataController+<Post>d__2 | 
+Error in Path : /api/RealData
+Raw Url : /api/RealData
+Type of Exception : DbEntityValidationException
+Message : 一個或多個實體的驗證失敗。如需詳細資料，請參閱 'EntityValidationErrors' 屬性。
+Source : EntityFramework
+Stack Trace :    於 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   於 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   於 System.Data.Entity.DbContext.SaveChanges()
+   於 DataApi.Controllers.RealDataController.<Post>d__2.MoveNext() 於 C:\Users\Kevin\Documents\Visual Studio 2017\Projects\DataApi\DataApi\Controllers\RealDataController.cs: 行 60
+TargetSite : Int32 SaveChanges()
+ 
+

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="APIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HotSpotDB">
+    <Key>
+      <PropertyRef Name="SNO" />
+    </Key>
+    <Property Name="SNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="spot_name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="district" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="apparatus_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="APIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HotSpotDB" EntityType="Self.HotSpotDB" />
+    <EntitySet Name="ExtData" EntityType="APIModel.ExtData" />
+    <EntitySet Name="RealData" EntityType="APIModel.RealData" />
+  </EntityContainer>
+  <EntityType Name="ExtData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="data_generated_dtime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="data_start_dtime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="data_end_dtime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tag_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tag_external_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tag_setting_external_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tag_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_external_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_setting_external_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RealData">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="data_generated_dtime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="data_start_dtime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="data_end_dtime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_external_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_setting_external_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_category_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="quantity" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+</Schema>

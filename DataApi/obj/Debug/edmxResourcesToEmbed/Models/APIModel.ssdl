@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="APIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ExtData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_id" Type="varchar" MaxLength="50" />
+    <Property Name="data_generated_dtime" Type="varchar" MaxLength="50" />
+    <Property Name="data_start_dtime" Type="varchar" MaxLength="50" />
+    <Property Name="data_end_dtime" Type="varchar" MaxLength="50" />
+    <Property Name="tag_id" Type="varchar" MaxLength="50" />
+    <Property Name="tag_external_id" Type="varchar" MaxLength="50" />
+    <Property Name="tag_setting_external_id" Type="varchar" MaxLength="50" />
+    <Property Name="tag_name" Type="varchar" MaxLength="50" />
+    <Property Name="item_id" Type="varchar" MaxLength="50" />
+    <Property Name="item_external_id" Type="varchar" MaxLength="50" />
+    <Property Name="item_setting_external_id" Type="varchar" MaxLength="50" />
+    <Property Name="item_name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HotSpotDB">
+    <Key>
+      <PropertyRef Name="SNO" />
+    </Key>
+    <Property Name="SNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="spot_name" Type="varchar" MaxLength="500" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+    <Property Name="company" Type="varchar" MaxLength="50" />
+    <Property Name="district" Type="varchar" MaxLength="500" />
+    <Property Name="address" Type="varchar" MaxLength="500" />
+    <Property Name="apparatus_name" Type="varchar" MaxLength="50" />
+    <Property Name="latitude" Type="varchar" MaxLength="50" />
+    <Property Name="longitude" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RealData">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_id" Type="varchar" MaxLength="50" />
+    <Property Name="data_generated_dtime" Type="varchar" MaxLength="50" />
+    <Property Name="data_start_dtime" Type="varchar" MaxLength="50" />
+    <Property Name="data_end_dtime" Type="varchar" MaxLength="50" />
+    <Property Name="item_id" Type="varchar" MaxLength="50" />
+    <Property Name="item_external_id" Type="varchar" MaxLength="50" />
+    <Property Name="item_setting_external_id" Type="varchar" MaxLength="50" />
+    <Property Name="item_name" Type="varchar" MaxLength="50" />
+    <Property Name="item_category_id" Type="varchar" MaxLength="50" />
+    <Property Name="item_category_name" Type="varchar" MaxLength="50" />
+    <Property Name="quantity" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="APIModelStoreContainer">
+    <EntitySet Name="ExtData" EntityType="Self.ExtData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HotSpotDB" EntityType="Self.HotSpotDB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RealData" EntityType="Self.RealData" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

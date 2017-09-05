@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="APIModelStoreContainer" CdmEntityContainer="APIEntities">
+    <EntitySetMapping Name="HotSpotDB">
+      <EntityTypeMapping TypeName="APIModel.HotSpotDB">
+        <MappingFragment StoreEntitySet="HotSpotDB">
+          <ScalarProperty Name="SNO" ColumnName="SNO" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="spot_name" ColumnName="spot_name" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="district" ColumnName="district" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="apparatus_name" ColumnName="apparatus_name" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExtData">
+      <EntityTypeMapping TypeName="APIModel.ExtData">
+        <MappingFragment StoreEntitySet="ExtData">
+          <ScalarProperty Name="item_name" ColumnName="item_name" />
+          <ScalarProperty Name="item_setting_external_id" ColumnName="item_setting_external_id" />
+          <ScalarProperty Name="item_external_id" ColumnName="item_external_id" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+          <ScalarProperty Name="tag_setting_external_id" ColumnName="tag_setting_external_id" />
+          <ScalarProperty Name="tag_external_id" ColumnName="tag_external_id" />
+          <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+          <ScalarProperty Name="data_end_dtime" ColumnName="data_end_dtime" />
+          <ScalarProperty Name="data_start_dtime" ColumnName="data_start_dtime" />
+          <ScalarProperty Name="data_generated_dtime" ColumnName="data_generated_dtime" />
+          <ScalarProperty Name="store_id" ColumnName="store_id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RealData">
+      <EntityTypeMapping TypeName="APIModel.RealData">
+        <MappingFragment StoreEntitySet="RealData">
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="item_category_name" ColumnName="item_category_name" />
+          <ScalarProperty Name="item_category_id" ColumnName="item_category_id" />
+          <ScalarProperty Name="item_name" ColumnName="item_name" />
+          <ScalarProperty Name="item_setting_external_id" ColumnName="item_setting_external_id" />
+          <ScalarProperty Name="item_external_id" ColumnName="item_external_id" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="data_end_dtime" ColumnName="data_end_dtime" />
+          <ScalarProperty Name="data_start_dtime" ColumnName="data_start_dtime" />
+          <ScalarProperty Name="data_generated_dtime" ColumnName="data_generated_dtime" />
+          <ScalarProperty Name="store_id" ColumnName="store_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
